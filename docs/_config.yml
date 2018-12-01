@@ -1,0 +1,9 @@
+# Site settings
+title: "Team 5818's Extra Docs Site"
+baseurl: "/Primary"
+url: "https://team5818.github.com"
+
+# Build settings
+markdown: kramdown
+permalink: /:categories/:year/:month/:day/:title/
+
