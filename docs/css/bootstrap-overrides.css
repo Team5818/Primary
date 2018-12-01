@@ -1,4 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono|Slabo');
+
+@font-face {
+    font-family: monospace;
+    src: local("Fira Mono");
+}
+
+body, p {
+    font-family: "Slabo", serif;
+}
+
 code {
+    font-family: monospace;
     color: #3c5d5d;
     background-color: hsla(210, 15%, 15%, 0.05);
     border-radius: 3px;
@@ -12,7 +24,22 @@ h1, h2, h3, h4, h5, h6 {
     padding-bottom: .3em;
 }
 
-img {
+.container img {
     display: block;
     margin: 0 auto 0 auto;
+    background-color: hsla(210, 15%, 15%, 0.1);
+    border-radius: 3px;
+    padding: .4em;
+
+    /* Responsive */
+    max-width: 100%;
+    height: auto;
+    max-height: 45vh;
+}
+
+@media (min-width: 768px) {
+    /* Use a smaller text column here. */
+    .container {
+        width: 40em;
+    }
 }
