@@ -53,6 +53,23 @@
 
 <div id="container" class="container mx-auto">
     {{ content }}
+    {% if page.page-kind == 'guide' %}
+    <footer class="py-5">
+        <div class="d-flex">
+            {% capture linkcontent %}
+                <i class="fas fa-arrow-left"></i>
+                Previous
+            {% endcapture %}
+            {% include linkwrap.html link=page.previous-guide content=linkcontent class="mr-auto" %}
+
+            {% capture linkcontent %}
+                Next
+                <i class="fas fa-arrow-right"></i>
+            {% endcapture %}
+            {% include linkwrap.html link=page.next-guide content=linkcontent %}
+        </div>
+    </footer>
+    {% endif %}
 </div>
 </body>
 </html>

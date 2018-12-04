@@ -1,0 +1,10 @@
+{% if include.link == undefined %}
+    {% capture opentag %}<span class="{{ include.class }} disabled">{% endcapture %}
+    {% capture closetag %}</span>{% endcapture %}
+{% else %}
+    {% capture opentag %}<a href="{{ include.link }}" class="{{ include.class }}">{% endcapture %}
+    {% capture closetag %}</a>{% endcapture %}
+{% endif %}
+{{ opentag }}
+    {{ include.content }}
+{{ closetag }}

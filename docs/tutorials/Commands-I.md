@@ -1,3 +1,7 @@
+---
+page-kind: guide
+next-guide: ./Commands-II.html
+---
 Commands I
 ==========
 
