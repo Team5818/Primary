@@ -1,10 +1,8 @@
 ---
 page-kind: guide
+title: Commands I
 next-guide: ./Commands-II.html
 ---
-Commands I
-==========
-
 This tutorial is a bit more of an extended guide on the general command
 framework included in WPILib.
 

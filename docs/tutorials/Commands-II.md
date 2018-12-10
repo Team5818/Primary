@@ -1,9 +1,8 @@
 ---
 page-kind: guide
+title: Commands II
 previous-guide: ./Commands-I.html
 ---
-Commands II
-===========
 This part of the commands tutorial covers the code that needs to be written
 to represent the commands and systems presented in the previous tutorial.
 
