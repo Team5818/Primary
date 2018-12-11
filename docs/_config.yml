@@ -4,6 +4,9 @@ baseurl: "/Primary"
 url: "https://team5818.github.com"
 
 # Build settings
-markdown: kramdown
+markdown: CommonMarkGhPages
 permalink: /:categories/:year/:month/:day/:title
 
+commonmark:
+  options: []
+  extensions: ["table"]

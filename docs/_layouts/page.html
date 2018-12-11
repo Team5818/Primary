@@ -7,7 +7,7 @@
 
     {% assign title = site.title %}
     {% if page.title %}
-        {% assign title = title | append: " - " | append: page.title %}
+    {% assign title = title | append: " - " | append: page.title %}
     {% endif %}
     <title>{{ title }}</title>
 
@@ -25,10 +25,14 @@
             integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
             crossorigin="anonymous"></script>
 
+    <script defer src="{{ site.baseurl }}/js/table-fix.js"></script>
+
     <!-- CSS -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
           integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
+    <link rel="stylesheet"
+          href="{{ site.baseurl }}/css/tango.css"/>
     <link rel="stylesheet"
           href="{{ site.baseurl }}/css/bootstrap-overrides.css"/>
 </head>
@@ -57,21 +61,23 @@
 
 <div id="container" class="container mx-auto">
     {% if page.page-kind == 'guide' and page.title %}
-        <h1>{{ page.title }}</h1>
+    <h1>{{ page.title }}</h1>
     {% endif %}
-    {{ content }}
+    <div id="content">
+        {{ content }}
+    </div>
     {% if page.page-kind == 'guide' %}
     <footer class="py-5">
         <div class="d-flex">
             {% capture linkcontent %}
-                <i class="fas fa-arrow-left"></i>
-                Previous
+            <i class="fas fa-arrow-left"></i>
+            Previous
             {% endcapture %}
             {% include linkwrap.html link=page.previous-guide content=linkcontent class="mr-auto" %}
 
             {% capture linkcontent %}
-                Next
-                <i class="fas fa-arrow-right"></i>
+            Next
+            <i class="fas fa-arrow-right"></i>
             {% endcapture %}
             {% include linkwrap.html link=page.next-guide content=linkcontent %}
         </div>

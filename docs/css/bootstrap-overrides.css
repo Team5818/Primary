@@ -12,11 +12,28 @@ body, p {
 code {
     font-family: monospace;
     color: #3c5d5d;
-    background-color: hsla(210, 15%, 15%, 0.05);
-    border-radius: 3px;
+    background-color: #ebebeb;
     font-size: 85%;
     margin: 0;
+}
+
+.table-responsive code {
+    white-space: nowrap;
+}
+
+code {
+    border-radius: 3px;
     padding: .2em .4em;
+}
+
+pre.highlight {
+    border-radius: 3px;
+    background-color: #ebebeb;
+    padding: .2em .4em;
+}
+pre > code {
+    border-radius: 0;
+    padding: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -47,4 +64,9 @@ h1, h2, h3, h4, h5, h6 {
 .disabled {
     cursor: not-allowed;
     color: grey;
+}
+
+/* Fix table sizing */
+.table-responsive {
+    width: auto;
 }
