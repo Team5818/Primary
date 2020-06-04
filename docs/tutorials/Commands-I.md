@@ -13,6 +13,19 @@ on Slack!
 The WPILib command framework (WCF) is composed of a few very simple
 components: `Subsystem`, `Command`, `CommandGroup`, and `Scheduler`.
 
+## Changes for 2020+
+The 2020+ versions of WPILib have a slightly changed structure 
+from the descriptions given throughout this tutorial, but are 
+generally similar. The main important changes relevant to this 
+guide (and part II) are as listed below:
+* `Command`, `Subsystem`, and `CommandGroup` are now interfaces, 
+meaning that you'll need to use `CommandBase`, `SubsystemBase`, 
+and `CommandGroupBase` to implement them effectively.
+* `Scheduler` is now `CommandScheduler` and has an access of 
+`CommandScheduler.getInstance().run()` instead of `Scheduler.run()`
+* Using `require(Subsystem... subsytems)` has been renamed to 
+`addRequirements(Subsystem... subsytems)`
+
 ### Subsystem
 The `Subsystem` class represents our mechanisms to the WCF.
 "Mechanisms" are concepts like the drive train, arm, pistons,
