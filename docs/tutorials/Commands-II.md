@@ -9,6 +9,24 @@ to represent the commands and systems presented in the previous tutorial.
 The actual code is too big to contain here, and can be seen in the [code
 repository](https://github.com/Team5818/Tutorial-Commands-II).
 
+## Changes for 2020+
+The 2020+ versions of WPILib have a slightly changed structure 
+from the descriptions given throughout this tutorial, but are 
+generally similar. The main important changes relevant to this 
+guide are as listed below:
+* `Command`, `Subsystem`, and `CommandGroup` are now interfaces, 
+meaning that you'll need to use `CommandBase`, `SubsystemBase`, 
+and `CommandGroupBase` to implement them effectively.
+* `Scheduler` is now `CommandScheduler` and has an access of 
+`CommandScheduler.getInstance().run()` instead of `Scheduler.run()`
+* Using `require(Subsystem... subsytems)` has been renamed to 
+`addRequirements(Subsystem... subsytems)`
+* `TimedCommand` no longer exists, meaning the user will have to 
+implement/override the `boolean isFinished()` method from the 
+`Command` interface in order to stop after a certain time. 
+Alternatively, you could use a `WaitCommand` and a `DeadlineGroup`. 
+Refer to the [WPILib command group documentation](https://docs.wpilib.org/en/stable/docs/software/commandbased/command-groups.html) for more information.
+
 ## Subsystems
 The foundation for the rest of the code comes from the `Subsystem` classes,
 so we'll write them first.
